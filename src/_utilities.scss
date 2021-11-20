@@ -1,0 +1,113 @@
+@use './variables' as *;
+
+//Container
+.container {
+  margin: auto;
+}
+
+@media only screen and (min-width: $sm) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media only screen and (min-width: $md) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media only screen and (min-width: $lg) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media only screen and (min-width: $xl) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media only screen and (min-width: $xxl) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+//Common button styles
+@mixin btn($bg, $color) {
+  padding: 0.7rem 0.9rem;
+  border-radius: 5px;
+  border: 5px solid transparent;
+  font-weight: 600;
+  color: $color;
+  background: $bg;
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 1.2rem;
+}
+
+//Common background properties
+%bg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+//helper function for display:flex
+%flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+//General classes used throughout the pages
+.flex {
+  @extend %flex;
+}
+
+.light{
+  font-weight: 400;
+}
+.bold {
+  font-weight: 700;
+}
+.semi-bold {
+  font-weight: 600;
+}
+.extra-bold {
+  font-weight: 800;
+}
+.text-center{
+  text-align: center;
+}
+.capitalize{
+  text-transform: capitalize;
+}
+.text-white{
+  color: white;
+}
+
+.bg-white{
+  background-color: white;
+}
+
+.rounded{
+  border-radius: 5px;
+}
+
+.shadow{
+  box-shadow: 5px 5px 10px #000;
+}
+
+.mb-0{
+  margin-bottom: 0;
+}
+.mt-0{
+  margin-top: 0;
+}
+.pb-0{
+  padding-bottom: 0;
+}
+.pt-0{
+  padding-top: 0;
+}
